@@ -62,6 +62,7 @@
 		F73DEEA2223AF4550023C6C6 /* Azoera */ = {
 			isa = PBXGroup;
 			children = (
+				F73DEEA7223AF4550023C6C6 /* Main.storyboard */,
 				F763B96A22526928005697E5 /* CustomUI */,
 				F763B968225268F2005697E5 /* Resources */,
 			);
@@ -73,7 +74,6 @@
 			children = (
 				F763B97E22526D11005697E5 /* Fonts */,
 				F73DEEA3223AF4550023C6C6 /* AppDelegate.swift */,
-				F73DEEA7223AF4550023C6C6 /* Main.storyboard */,
 				F7E00FC822455CBA00B51EFA /* Colors.xcassets */,
 				F73DEEAA223AF4570023C6C6 /* Assets.xcassets */,
 				F73DEEAC223AF4570023C6C6 /* LaunchScreen.storyboard */,
@@ -132,6 +132,7 @@
 				TargetAttributes = {
 					F73DEE9F223AF4550023C6C6 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1140;
 					};
 				};
 			};
@@ -330,7 +331,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.trevoradcock.Azoera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -347,7 +348,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.trevoradcock.Azoera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
