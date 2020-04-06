@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="Qrn-D2-Qel">
             <objects>
-                <viewController id="077-zL-3Ry" sceneMemberID="viewController">
+                <viewController id="077-zL-3Ry" customClass="WelcomeViewController" customModule="Azoera" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mxe-tz-jih">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,17 +25,23 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5P-63-Gr8">
                                                 <rect key="frame" x="0.0" y="0.0" width="138.5" height="76"/>
                                                 <state key="normal" title="Log In"/>
+                                                <connections>
+                                                    <action selector="loginToggleButtonTapped:" destination="077-zL-3Ry" eventType="touchUpInside" id="cji-Np-6Y1"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6b-6d-pLS">
                                                 <rect key="frame" x="0.0" y="84" width="138.5" height="76"/>
                                                 <state key="normal" title="Sign Up"/>
+                                                <connections>
+                                                    <action selector="signupToggleButtonTapped:" destination="077-zL-3Ry" eventType="touchUpInside" id="Lim-Wj-GXz"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Gqq-P1-dLR">
                                         <rect key="frame" x="138.5" y="0.0" width="252.5" height="160"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hfz-Fv-99l">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hfz-Fv-99l" customClass="AzoeraTextField" customModule="Azoera" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="252.5" height="48"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="60" id="x9j-sN-ahZ"/>
@@ -43,12 +49,12 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pik-Tk-ii7">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pik-Tk-ii7" customClass="AzoeraTextField" customModule="Azoera" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="56" width="252.5" height="48"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm password..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JkW-uu-bHK">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm password..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JkW-uu-bHK" customClass="AzoeraTextField" customModule="Azoera" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="112" width="252.5" height="48"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -81,13 +87,13 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cXy-Nw-8W1">
                                 <rect key="frame" x="60" y="150.5" width="315" height="66"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Azoera" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJx-Da-4aQ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Azoera" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJx-Da-4aQ" customClass="BoldLabel" customModule="Azoera" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="141" height="19.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log in or sign up to explore new Azoera features" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5X-LZ-3Dh">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log in or sign up to explore new Azoera features" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5X-LZ-3Dh" customClass="LightLabel" customModule="Azoera" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="27.5" width="234.5" height="38.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
@@ -123,10 +129,23 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3xF-VL-GRw"/>
                     </view>
+                    <connections>
+                        <outlet property="confirmTextField" destination="JkW-uu-bHK" id="JsO-ZP-Cqh"/>
+                        <outlet property="descriptionLabel" destination="g5X-LZ-3Dh" id="m7h-fX-tbF"/>
+                        <outlet property="emailTextField" destination="Hfz-Fv-99l" id="KfV-RU-RTO"/>
+                        <outlet property="faqButton" destination="jIk-cH-N6P" id="1vd-ZM-luC"/>
+                        <outlet property="helpButton" destination="wFL-lD-IGI" id="9yV-Dz-8a5"/>
+                        <outlet property="loginToggleButton" destination="G5P-63-Gr8" id="U6A-CF-wu7"/>
+                        <outlet property="logoImageView" destination="jms-Bh-6cR" id="enn-7g-WG0"/>
+                        <outlet property="passwordTextField" destination="Pik-Tk-ii7" id="GLf-1P-rKl"/>
+                        <outlet property="signMeUpButton" destination="HUs-MD-5mg" id="nrc-Dg-U8y"/>
+                        <outlet property="signupToggleButton" destination="P6b-6d-pLS" id="1UT-cb-Wjo"/>
+                        <outlet property="welcomeLabel" destination="GJx-Da-4aQ" id="Wcd-nb-1tP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wqE-hM-zlf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="946.39999999999998" y="149.77511244377811"/>
+            <point key="canvasLocation" x="591" y="77"/>
         </scene>
     </scenes>
     <resources>
